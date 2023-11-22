@@ -60,8 +60,8 @@ class Stack:
             print("Stack size decreased successfully")
             return
         
-    def reset(self): #Stack을 초기화 시킨다
+    def reset(self): #Stack을 초기화한다
         self.list = [None] * self.stack_size
         self.top=-1
-        print("Stack was successfully initialized")
+        print("Stack has been reset")
         return
