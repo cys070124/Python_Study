@@ -29,6 +29,14 @@ class Stack:
         else:
             print("Stack underflow")
             return
+
+    def peek(self):
+        if not self.isEmpty():
+            print(self.list[self.top])
+            return
+        else:
+            print("Stack is empty")
+            return
         
     def increase(self, i): #Stack의 길이를 늘린다
         self.stack_size+=i
@@ -51,11 +59,9 @@ class Stack:
             self.list = self.list[:self.stack_size]
             print("Stack size decreased successfully")
             return
-
-    def peek(self):
-        if not self.isEmpty():
-            print(self.list[self.top])
-            return
-        else:
-            print("Stack is empty")
-            return
+        
+    def reset(self): #Stack을 초기화 시킨다
+        self.list = [None] * self.stack_size
+        self.top=-1
+        print("Stack was successfully initialized")
+        return
